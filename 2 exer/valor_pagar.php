@@ -1,10 +1,10 @@
 <?php
 
-    $vkg = $_POST["f_kg"];       
+    $kg = $_POST["f_kg"];       
     $val = $_POST["f_val"];
-    $res = $vkg * $val;
+    $res = $kg * $val;
 
-    echo "V0çê ira pagar ".$res." por".$vkg." deste produto";
+    echo "Voçê ira pagar $res,00 por $kg Kg deste produto";
 
 ?>
 
