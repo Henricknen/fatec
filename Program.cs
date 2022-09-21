@@ -1,73 +1,46 @@
-﻿
-void crescente(int nI, int nF)
+﻿const int MAX = 20;
+
+void Insere(int[] p, ref int t, int v)        /* fução de inserir */
 {
-    if (nI<=nF)
-    {
-        Console.WriteLine(nI);
-        crescente(nI+1, nF);
-    }
+    p[t] = v;
+    t = t + 1;
 }
 
-void decrescente(int nI, int nF)
+int Remove(int[] p, ref int t)            /* função de remover */
 {
-    if (nI<=nF)
-    {
-        decrescente(nI+1, nF);
-        Console.WriteLine(nI);
-    }
+    t = t - 1;
+    return (p[t]);
 }
 
-void impares(int nI, int nF)
+bool EstaVazia(int t)
 {
-    if (nI<=nF)
-    {
-        if (nI % 2 != 0)
-            Console.WriteLine(nI);
-        impares(nI+2, nF);
-    }
-}
-
-int somatorio (int nI, int nF)
-{
-    if (nI < nF)
-        return nI + somatorio(nI+1, nF);
+    if (t == 0)
+        return true;
     else
-        return nI;
+        return false;
 }
 
-
-
-string op = "0", op2;
-while (op != "3")
+bool EstaCheia(int t)
 {
-    Console.Clear();
-    Console.WriteLine("MENU PRINCIPAL");
-    Console.WriteLine("1 - Funções sem vetor");
-    Console.WriteLine("2 - Função com vetor");
-    Console.WriteLine("3 - Sair");
-    Console.Write("Opção Desejada: ");
-    op = Console.ReadLine();
-    if (op == "1")
-    {
-        Console.Write("Número Inicial: ");
-        int n1 = int.Parse(Console.ReadLine());
-        Console.Write("Número Final: ");
-        int n2 = int.Parse(Console.ReadLine());
-        Console.WriteLine("MENU 2");
-        Console.WriteLine("1 - Crescente");
-        Console.WriteLine("2 - Decrescente");
-        Console.WriteLine("3 - Ímpares");
-        Console.WriteLine("4 - Somatório");
-        Console.Write("Opção Desejada: ");
-        op2 = Console.ReadLine();
-        if (op2 == "1")
-            crescente(n1,n2);
-        else if (op2 == "2")
-            decrescente(n1, n2);
-        else if (op2 == "3")
-            impares(n1,n2);
-        else if (op2 == "4")
-            Console.WriteLine(somatorio(n1, n2));
-    }
-    Console.ReadKey();
+    if (t == MAX)
+        return true;
+    else
+        return false;
 }
+
+int n, r;                                  /* principal */
+int[] pilha = new int[MAX];
+int topo =0;
+
+Console.Write("Digite um numero: ");
+n = int.Parse(Console.ReadLine());
+while (n != 0) {
+    Insere(pilha, ref topo, n%2);
+    n = n / 2;
+}
+/* while (EstaVazia(topo) == false) */
+while (!EstaVazia(topo)) {      /* vai repetir enquanto nao estiver vazia */
+    r = Remove(pilha, ref topo);
+    Console.Write(r);
+}
+
