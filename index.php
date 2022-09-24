@@ -32,9 +32,19 @@ if (isset($_GET['var'])){
 
     } else if ($var == "json") {
         //json
+        //Criar aquivo na pasta do servidor
+        //echo "Export to JSON:<br>";
+        $json = json_encode($dados);
+        $bytes = file_put_contents("tabela.json", $json); 
+        // echo "O arquivo tabela.json foi criado com $bytes bytes.";
 
-
-
+        //baixar o arquivo
+        $filepath = "tabela.json";
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header("Content-Transfer-Encoding: utf-8");   
+        header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+        readfile($filepath);
 
     }
     exit;
