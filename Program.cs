@@ -1,73 +1,107 @@
-﻿
-void crescente(int nI, int nF)
+﻿using System;
+
+namespace palavras_ao_contrario
 {
-    if (nI<=nF)
+    class Program
     {
-        Console.WriteLine(nI);
-        crescente(nI+1, nF);
+
+
+        //const int MAX = int.MaxValue;
+        const int MAX = 20;
+
+        // INICIO FUNÇÕES AUXILIARES DE PILHA
+
+        static void Insere(char[] p, ref int t, char v)
+        {
+            p[t] = v;
+            t = t + 1;
+        }
+
+        static char Remove(char[] p, ref int t)
+        {
+            t = t - 1;
+            return (p[t]);
+        }
+
+
+
+        static bool EstaVazia(int t)
+        {
+            if (t == 0)
+                return true;
+            else
+                return false;
+        }
+
+      
+
+
+        static void Main(string[] args)
+        {
+            char[] pilha = new char[MAX];
+            int topo = 0;
+   
+            int i = 0;
+            string frase;
+            string nova_frase = "";
+
+            Console.WriteLine("Digite a frase: ");
+            frase = Console.ReadLine();
+
+            int tam = frase.Length;
+            char caractere;
+            bool ultimoChar = false;
+
+
+            while (i < tam)
+            {
+
+
+                if (i == tam - 1)
+                {
+
+                    ultimoChar = true;
+                }
+
+
+
+                caractere = frase[i];
+
+                if (caractere != ' ')
+                {
+
+                    Insere(pilha, ref topo, frase[i]);
+
+                    i++;
+
+                }
+
+                if (ultimoChar || caractere == ' ')
+                {
+
+                    while (!EstaVazia(topo))
+                    {
+
+                        char c = Remove(pilha, ref topo);
+                        nova_frase += c;
+                    }
+                    nova_frase += " ";
+
+                    i++;
+
+                }
+
+
+
+            }
+
+            Console.WriteLine(nova_frase);
+            Console.ReadKey();
+
+
+
+
+        }
+
     }
-}
-
-void decrescente(int nI, int nF)
-{
-    if (nI<=nF)
-    {
-        decrescente(nI+1, nF);
-        Console.WriteLine(nI);
-    }
-}
-
-void impares(int nI, int nF)
-{
-    if (nI<=nF)
-    {
-        if (nI % 2 != 0)
-            Console.WriteLine(nI);
-        impares(nI+2, nF);
-    }
-}
-
-int somatorio (int nI, int nF)
-{
-    if (nI < nF)
-        return nI + somatorio(nI+1, nF);
-    else
-        return nI;
-}
-
-
-
-string op = "0", op2;
-while (op != "3")
-{
-    Console.Clear();
-    Console.WriteLine("MENU PRINCIPAL");
-    Console.WriteLine("1 - Funções sem vetor");
-    Console.WriteLine("2 - Função com vetor");
-    Console.WriteLine("3 - Sair");
-    Console.Write("Opção Desejada: ");
-    op = Console.ReadLine();
-    if (op == "1")
-    {
-        Console.Write("Número Inicial: ");
-        int n1 = int.Parse(Console.ReadLine());
-        Console.Write("Número Final: ");
-        int n2 = int.Parse(Console.ReadLine());
-        Console.WriteLine("MENU 2");
-        Console.WriteLine("1 - Crescente");
-        Console.WriteLine("2 - Decrescente");
-        Console.WriteLine("3 - Ímpares");
-        Console.WriteLine("4 - Somatório");
-        Console.Write("Opção Desejada: ");
-        op2 = Console.ReadLine();
-        if (op2 == "1")
-            crescente(n1,n2);
-        else if (op2 == "2")
-            decrescente(n1, n2);
-        else if (op2 == "3")
-            impares(n1,n2);
-        else if (op2 == "4")
-            Console.WriteLine(somatorio(n1, n2));
-    }
-    Console.ReadKey();
 }
