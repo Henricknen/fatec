@@ -1,0 +1,15 @@
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\bin\Debug\net6.0\revisao_estrutura_de_dados.exe
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\bin\Debug\net6.0\revisao_estrutura_de_dados.deps.json
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\bin\Debug\net6.0\revisao_estrutura_de_dados.runtimeconfig.json
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\bin\Debug\net6.0\revisao_estrutura_de_dados.dll
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\bin\Debug\net6.0\revisao_estrutura_de_dados.pdb
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.csproj.AssemblyReference.cache
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.AssemblyInfoInputs.cache
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.AssemblyInfo.cs
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.dll
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\refint\revisao_estrutura_de_dados.dll
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.pdb
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\revisao_estrutura_de_dados.genruntimeconfig.cache
+C:\Users\aluno\Desktop\fatec\revisao_estrutura_de_dados\obj\Debug\net6.0\ref\revisao_estrutura_de_dados.dll

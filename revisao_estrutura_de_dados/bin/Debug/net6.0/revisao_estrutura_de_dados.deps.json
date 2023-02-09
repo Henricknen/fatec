@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "revisao_estrutura_de_dados/1.0.0": {
+        "runtime": {
+          "revisao_estrutura_de_dados.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "revisao_estrutura_de_dados/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
